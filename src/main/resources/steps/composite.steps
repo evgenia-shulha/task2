@@ -1,4 +1,5 @@
 Composite: When I Log In like existing user
+<<<<<<< HEAD
 Given I am on the main application page
 When I click on an element by the xpath '//a[@class="btn btn-sm btn-link text-white"]'
 When I enter '${useremail}' in a field by the xpath '//input[@id="user"]'
@@ -16,5 +17,16 @@ When I wait until an element with the xpath '//a[@data-test-id="header-member-me
 When I click on an element by the xpath '//a[@data-test-id="header-member-menu-profile"]'
 When I wait until an element with the xpath '//input[@name="username"]' appears
 Then an element by the xpath '//input[@value='${username}']' exists
+=======
+When I click on an element by the xpath '//a[@class="btn btn-sm btn-link text-whiten"]'
+When I enter '$useremail' in a field by the xpath '//input[@id="user"]'
+When I click on an element by the xpath '//button[@id="login"]'
+When I enter '$userpassword' in a field by the xpath '//input[@id="password"]'
+When I click on an element by the xpath '//span[@class="css-t5emrf"]'
+
+Composite: When I verify user profile
+When I ckick on an element by the xpath '//a[@data-test-id="header-member-menu-profile"]'
+Then an element by the xpath '//input[@value='$username']' exists
+>>>>>>> f54061f9599b9ed3cc1c73e53b2f485b033c86c5
 When I establish baseline with `Profile`
 When I compare against baseline with `Profile`
